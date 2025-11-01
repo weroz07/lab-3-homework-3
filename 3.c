@@ -8,9 +8,9 @@ int main() {
 
     double a, b;
 
-    printf("Введите a: ");
+    printf("Г‚ГўДєГ¤ДЌЕ€Дє a: ");
     scanf("%lf", &a);
-    printf("Введите b: ");
+    printf("Г‚ГўДєГ¤ДЌЕ€Дє b: ");
     scanf("%lf", &b);
 
     double mul = a * b;
