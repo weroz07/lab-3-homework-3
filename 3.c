@@ -1,28 +1,18 @@
-//3
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
 #include <locale.h>
+#include <stdio.h>
 
-int main() {
-    setlocale(LC_ALL, "Russian");
-
-    double a, b;
-
-    printf("Ââĺäčňĺ a: ");
-    scanf("%lf", &a);
-    printf("Ââĺäčňĺ b: ");
-    scanf("%lf", &b);
-
-    double mul = a * b;
-    double sum = a + b;
-    double sub = a - b;
-
-    printf("-------------------------\n");
-    printf("| a * b  | a+b   | a-b  |\n");
-    printf("-------------------------\n");
-    printf("| %.0f * %.0f | %.0f+%.0f | %.0f-%.0f |\n", a, b, a, b, a, b);
-    printf("| %-7.2f| %-6.2f| %-6.2f|\n", mul, sum, sub);
-    printf("-------------------------\n");
-
-    return 0;
+float a, b;
+char ac = 'a';
+char bc = 'b';
+void main()
+{
+	setlocale(LC_ALL, "RUS");
+	puts("Введите два числа через пробел:");
+	scanf("%f %f", &a, &b);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%-15c*%15c|%-15c+%15c|%-15c-%15c|\n", ac, bc, ac, bc, ac, bc);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%-15.2f*%15.2f|%-15.2f+%15.2f|%-15.2f-%15.2f|\n", a, b, a, b, a, b);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%31.2f|%31.2f|%31.2f|\n", a * b, a + b, a - b);
 }
