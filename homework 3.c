@@ -1,32 +1,18 @@
-//4
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
 #include <locale.h>
+#include <stdio.h>
 
-int main() {
-    setlocale(LC_ALL, "Russian");
-
-    float speed;
-    int type;
-
-    printf("1 - Áèò/ñ â Êáàéò/ñ\n");
-    printf("2 - Êáàéò/ñ â Áèò/ñ\n");
-    printf("Âûáåðèòå: ");
-    scanf("%d", &type);
-
-    if (type == 1) {
-        printf("Ââåäèòå Áèò/ñ: ");
-        scanf("%f", &speed);
-        printf("Ðåçóëüòàò: %.2f Êáàéò/ñ\n", speed / 8192);
-    }
-    else if (type == 2) {
-        printf("Ââåäèòå Êáàéò/ñ: ");
-        scanf("%f", &speed);
-        printf("Ðåçóëüòàò: %.2f Áèò/ñ\n", speed * 8192);
-    }
-    else {
-        printf("Îøèáêà!\n");
-    }
-
-    return 0;
+float a, b;
+char ac = 'a';
+char bc = 'b';
+void main()
+{
+	setlocale(LC_ALL, "RUS");
+	puts("Введите два числа через пробел:");
+	scanf("%f %f", &a, &b);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%-15c*%15c|%-15c+%15c|%-15c-%15c|\n", ac, bc, ac, bc, ac, bc);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%-15.2f*%15.2f|%-15.2f+%15.2f|%-15.2f-%15.2f|\n", a, b, a, b, a, b);
+	printf("_________________________________________________________________________________________________\n");
+	printf("|%31.2f|%31.2f|%31.2f|\n", a * b, a + b, a - b);
 }
